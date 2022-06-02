@@ -1,0 +1,94 @@
+[{
+  "name": "vemana",
+  "startedIn": 1999,
+  "NoOfStudents": 1000,
+  "NoOfStaff": 150,
+  "Dept": [{
+      "Branch": "ECE",
+      "labs": 20,
+      "Projects": 5,
+      "HOD": 2
+  },
+   {
+      "Branch": "TCE",
+      "labs": 10,
+      "Projects": 4,
+      "HOD": 1
+  }]
+},
+{
+  "name": "Acharya",
+  "startedIn": 1989,
+  "NoOfStudents": 950,
+  "NoOfStaff": 148,
+  "location": [{
+      "place": "Bangalore",
+      "NoOfCollages": 2
+  },
+
+  {
+      "place": "Mysore",
+      "NoOfCollages": 3
+  }]
+},
+{
+  "name": "oxford",
+  "startedIn": 1980,
+  "NoOfStudents": 896,
+  "NoOfStaff": 149,
+  "popularFor": [{
+      "dept": "ECE",
+      "specilization": "VLSI"
+  },
+  {
+      "dept": "CSE",
+      "specilization": "AI"
+  }]
+},
+{
+  "name": "PES",
+  "startedIn": 2000,
+  "NoOfStudents": 785,
+  "NoOfStaff": 123,
+  "CutOf": [{
+      "PCMB": 123,
+      "PCMC": 153,
+      "PCME": 146
+  }]
+},
+{
+  "name": "RV",
+  "startedIn": 2005,
+  "NoOfStudents": 562,
+  "NoOfStaff": 96,
+  "OtherCourses": [{
+      "course": "Mtech",
+      "NoOfSeats": 60
+  },
+  {
+      "course": "MBA",
+      "NoOfSeats": 50
+  }]
+},
+{
+  "name": "East Point",
+  "startedIn": 2015,
+  "NoOfStudents": 400,
+  "NoOfStaff": 40,
+  "CompanyVisit": [{
+      "CName": "Wipro",
+      "Hire": 5
+  },
+  {
+      "Cname": "Infosis",
+      "Hire": 10
+  },
+  {
+      "Cname": "Cognizant",
+      "Hire": 7
+  }]
+
+}]
+
+
+
