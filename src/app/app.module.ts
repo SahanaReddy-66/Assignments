@@ -10,6 +10,7 @@ import { ApicomponentComponent } from './apicomponent/apicomponent.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormarrayComponent } from './formarray/formarray.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DecoratorsComponent } from './decorators/decorators.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PipesComponent,
     ApicomponentComponent,
     FormarrayComponent,
+    DecoratorsComponent,
  
   ],
   imports: [

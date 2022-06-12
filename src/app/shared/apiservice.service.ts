@@ -16,6 +16,12 @@ export class ApiserviceService {
      return this.httpclient.get(url ) 
     
    }
+   
+   apiData(){
+    let url=environment.apiDomain + 'api/users?page=2';
+    return this.httpclient.get(url)
+  }
+  
    getUserdata2(){
     let url = environment.apiDomain + 'api/users?page=2';
     return this.httpclient.get(url)
