@@ -7,10 +7,13 @@ import { JavaComponent } from './java/java.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PipesComponent } from './pipes/pipes.component';
 import { ApicomponentComponent } from './apicomponent/apicomponent.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormarrayComponent } from './formarray/formarray.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DecoratorsComponent } from './decorators/decorators.component';
+import { GridComponent } from './grid/grid.component';
+import { AuthhInterceptor } from './authh.interceptor';
+import { AgGridModule } from 'ag-grid-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +22,7 @@ import { DecoratorsComponent } from './decorators/decorators.component';
     ApicomponentComponent,
     FormarrayComponent,
     DecoratorsComponent,
+    GridComponent,
  
   ],
   imports: [
@@ -27,9 +31,12 @@ import { DecoratorsComponent } from './decorators/decorators.component';
     NgbModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AgGridModule
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS, useClass:AuthhInterceptor,multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
