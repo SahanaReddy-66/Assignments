@@ -14,6 +14,8 @@ import { DecoratorsComponent } from './decorators/decorators.component';
 import { GridComponent } from './grid/grid.component';
 import { AuthhInterceptor } from './authh.interceptor';
 import { AgGridModule } from 'ag-grid-angular';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,9 @@ import { AgGridModule } from 'ag-grid-angular';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    AgGridModule
+    AgGridModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS, useClass:AuthhInterceptor,multi:true}

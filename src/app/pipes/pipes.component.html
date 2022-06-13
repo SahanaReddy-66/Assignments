@@ -1,5 +1,15 @@
-
-<b>{{name | titlecase}}</b>
+<div  class="design" style="font-size: 20px;">
+    <label >User Name</label>
+    <input type="text" name="" id="" [(ngModel)]="namee">
+    <br><br>
+    <label for="">Password</label>
+    <input type="password"  [(ngModel)]="pass">
+    <br><br>
+    <button (click)="showToasterSuccess()" class="btn btn-success login" >
+      Login
+    </button>
+</div>
+<!-- <b>{{name | titlecase}}</b>
 <hr>
 <b>{{ money | currency:'USD':'symbol' }}</b>
 <hr>
@@ -15,5 +25,5 @@
 <b>{{name | lowercase}}</b>
 <hr>
 
-<b>{{ jsonval | json }}</b>
+<b>{{ jsonval | json }}</b> -->
 
