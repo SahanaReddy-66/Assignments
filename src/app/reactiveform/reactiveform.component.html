@@ -1,0 +1,32 @@
+<form [formGroup]="form">
+    <label for=""> First Name</label>
+    <input type="text" formControlName="first_name">
+    <p class="error" *ngIf="FirstName.touched && FirstName.invalid">Please Enter Valid name</p>
+    <br><br>
+    <label for=""> Last Name</label>
+    <input type="text" formControlName="last_name">
+    <p class="error" *ngIf="LastName.touched && LastName.invalid">Please Enter Valid name</p>
+    <br><br>
+    <label for=""> Mobile Number</label>
+    <input type="number" formControlName="mobile">
+    <p class="error" *ngIf="Mobile.touched && Mobile.invalid">Please Enter Valid Mobile Number</p>
+    <br><br>
+    <label for=""> Data of Birth</label>
+    <input type="date" formControlName="data_of_birth">
+    <p class="error" *ngIf="DateOfBirth.touched && DateOfBirth.invalid">Please Enter Valid Date of Birth</p>
+    <br><br>
+        <label for="">Email</label>
+    <input type="email" formControlName="email">
+    <p class="error" *ngIf="Email.touched && Email.invalid">Please Enter Valid Email Id</p>
+    <br><br>
+    <label for=""> Password</label>
+    <input type="password" formControlName="password">
+    <p class="error" *ngIf="Password.touched && Password.invalid">Please Enter Valid Password</p>
+    <br><br>
+    <label for="">Confirm Password</label>
+    <input type="password" formControlName="confirm_password">
+    <p class="error" *ngIf="ConfirmPassword.touched && ConfirmPassword.invalid">Please Enter Valid password</p>
+    <br><br>
+    <button type="submit" class="btn btn-primary submit" (click)="submit()">Submit</button>
+
+</form>

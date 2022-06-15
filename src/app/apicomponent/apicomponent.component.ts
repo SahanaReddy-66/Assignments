@@ -22,6 +22,7 @@ userDetails(){
     // console.log(response.data);
     this.arrayOne=response.data;
     console.log(this.arrayOne)
+    console.log(response.status)
   })
 }
 userDetails2(){

@@ -5,13 +5,15 @@ import { FormarrayComponent } from './formarray/formarray.component';
 import { GridComponent } from './grid/grid.component';
 import { JavaComponent } from './java/java.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 const routes: Routes = [
   {path:'pipes', component:PipesComponent},
   {path:'java', component:JavaComponent},
   {path:'apipractice', component:ApicomponentComponent},
   {path:'formarray', component:FormarrayComponent},
-  {path:'grid', component:GridComponent}
+  {path:'grid', component:GridComponent},
+  {path:'reactiveform', component:ReactiveformComponent}
 ];
 
 @NgModule({
