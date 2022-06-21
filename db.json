@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "sahana": [
+    {
+      "first_name": " Sahana",
+      "last_name": " Reddy",
+      "user_name": "Sahana",
+      "password": "Sahanareddy@66",
+      "gender": "Female",
+      "id": 1
+    },
+    {
+      "first_name": " Mickal",
+      "last_name": " John",
+      "user_name": "MickalJohn66",
+      "password": "MickalJohn@66",
+      "gender": "Male",
+      "id": 2
+    }
+    
+  ]
+}
