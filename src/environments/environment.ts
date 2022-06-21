@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   apiDomain:'https://reqres.in/',
+  domain:'https://bookcart.azurewebsites.net/'
 };
 
 /*

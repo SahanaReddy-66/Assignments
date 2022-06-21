@@ -13,7 +13,7 @@ export class AuthhInterceptor implements HttpInterceptor {
   constructor() {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    console.log(request)
+    // console.log(request)
     return next.handle(request)
   }
 }

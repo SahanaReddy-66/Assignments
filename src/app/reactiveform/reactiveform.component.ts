@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ApiserviceService } from '../shared/apiservice.service';
 
 @Component({
   selector: 'app-reactiveform',
@@ -7,52 +8,50 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./reactiveform.component.scss']
 })
 export class ReactiveformComponent implements OnInit {
-  form:any;
-  constructor() { }
+  form: any;
+  array: any = [];
+  Search: any
+  newArray: any = [];
+  constructor(private api: ApiserviceService) { }
 
   ngOnInit(): void {
-    this.form=new FormGroup({
-      'first_name': new FormControl(" ", [Validators.required, Validators.minLength(4), Validators.pattern('^[a-zA-Z \-\']+')] ),
+      this.form = new FormGroup({
+      'first_name': new FormControl(" ", [Validators.required, Validators.minLength(4), Validators.pattern('^[a-zA-Z \-\']+')]),
       'last_name': new FormControl(" ", [Validators.required, Validators.minLength(4), Validators.pattern('^[a-zA-Z \-\']+')]),
-      'mobile': new FormControl(" ", [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern('[6-9]\\d{9}')]),
-      'data_of_birth': new FormControl(" ", [Validators.required]),
-      'email': new FormControl(" ", [Validators.required, Validators.pattern('[a-z0-9]+@[a-z]+\.[a-z]{2,3}')]),
-     'password': new FormControl("", [Validators.required, Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$')]),
-     'confirm_password': new FormControl("",[ Validators.required, Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$')])
+      'user_name': new FormControl("", [Validators.required]),
+      'password': new FormControl("", [Validators.required, Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$')]),
+      'gender': new FormControl("", [Validators.required])
     })
   }
   get FirstName() {
     return this.form.get('first_name')
-
   }
   get LastName() {
     return this.form.get('last_name')
-
   }
-  get Mobile() {
-    return this.form.get('mobile')
-
-  }
-  get DateOfBirth(){
-    return this.form.get('data_of_birth')
-  }
-  get Email() {
-    return this.form.get('email')
-
+  get UserName() {
+    return this.form.get('user_name')
   }
   get Password() {
     return this.form.get('password')
-
   }
-  get ConfirmPassword() {
-    return this.form.get('confirm_password')
 
-  }
-  
-  submit(){
+  submit() {
+ 
     console.log(this.form)
-    if(this.form.get('password').value != this.form.get('confirm_password').value){
-      window.alert("Password and Confirm Password doesnt match ")
-    }
+    this.api.getUserdata().subscribe((res: any) => {
+      const user = res.find((a: any) => {
+        return a.user_name === this.form.value.user_name
+      });
+      if (user) {
+        window.alert("user name exists")
+      }
+      else {
+        this.api.postData(this.form.value).subscribe((res: any) => {
+       
+        })
+      }
+    })
+
   }
 }

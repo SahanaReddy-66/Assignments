@@ -14,7 +14,7 @@ arrayTwo:any=[];
   ngOnInit(): void {
     this.userDetails();
     this.userDetails2();
-  this.random();
+  
   }
 userDetails(){
   this.api.getUserdata().subscribe((response:any)=>{
@@ -33,9 +33,5 @@ userDetails2(){
     console.log(this.arrayTwo);
   })
 }
-random(){
-  this.api.random().subscribe((response:any)=>{
-    console.log(response)
-  })
-}
+
 }
